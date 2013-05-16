@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+
+        {% css_asset_tag global %}
+          - /_assets/css/syntax.css
+          - /_assets/css/main.css
+        {% endcss_asset_tag %}
+
+    </head>
+    <body>
+
+        <div class="container">
+          <div class="site">
+            <div class="header">
+              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+              <a class="extra" href="/">home</a>
+            </div>
+
+                {{ content }}
+
+            <div class="footer">
+              <div class="contact">
+                <p>
+                  Wen-Hao Lue<br />
+                  Engineer<br />
+                  me@wenhaolue.com
+                </p>
+              </div>
+              <div class="contact">
+                <p>
+                  <a href="http://github.com/wlue">github.com/wlue</a><br />
+                  <a href="http://twitter.com/wlue">twitter.com/wlue</a><br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /container -->
+
+    </body>
+</html>
