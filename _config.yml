@@ -3,6 +3,11 @@ pygments: true
 relative_permalinks: false
 
 google_analytics:
-  account: UA-12654814-1
+    account: UA-12654814-1
 disqus:
-  id: wlue
+    id: wlue
+
+# plugin config
+sass:
+    syntax: scss
+    style: compressed
