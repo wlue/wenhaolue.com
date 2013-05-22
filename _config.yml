@@ -1,13 +1,15 @@
 name: Wen-Hao Lue
 pygments: true
 relative_permalinks: false
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock']
 
 google_analytics:
-    account: UA-12654814-1
+  account: UA-12654814-1
 disqus:
-    id: wlue
+  id: wlue
 
-# plugin config
-sass:
-    syntax: scss
-    style: compressed
+# plugin
+assets:
+  compress:
+    js: uglifier
+    css: sass
