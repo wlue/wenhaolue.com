@@ -13,5 +13,10 @@ end
 
 desc "Deploy to development."
 task :deploy_dev => :generate do
-  system 'rsync -rtzh --progress --delete _site/ nimbus:/var/www/dev.wenhaolue.com/public/'
+  system 'rsync -rtzh --progress --delete _site/ nimbus:/var/www/dev.wenhaolue.com/public_html/'
+end
+
+desc "Deploy to production."
+task :deploy_dev => :generate do
+  system 'rsync -rtzh --progress --delete _site/ nimbus:/var/www/wenhaolue.com/public_html/'
 end
