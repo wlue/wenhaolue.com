@@ -1,7 +1,77 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
+@import "susy";
 @import "compass/reset";
+@import "compass/typography";
 @import "vendor/_font-awesome";
+
+// Compass settings.
+$base-font-size     : 18px;
+$base-line-height   : 30px;
+
+// Susy grid settings.
+$total-columns      : 12;
+$column-width       : 60px;
+$gutter-width       : 20px;
+$grid-padding       : 0px;
+$container-style    : fluid;
+$breakpoint         : 800px;
+
+
+@include establish-baseline;
+
+body {
+    font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, sans-serif;
+    min-height: 100%;
+    background-color: #f2f2f2;
+}
+
+/** Typography */
+
+p {
+    margin: 0px 0 1em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+h1 {
+    @include adjust-font-size-to(42px);
+}
+
+/** Style */
+
+mixin dark-style {
+    background-color: #333333;
+    color: #f2f2f2;
+}
+
+/** Containers */
+
+.page {
+    @include container;
+
+    min-height: 100%;
+
+    /** Sidebar */
+    .aside {
+        @include dark-style;
+
+        // Full-view mode.
+        @include at-breakpoint($breakpoint) {
+            @include span-columns(4, 12);
+            padding-top: 3em;
+            text-align: right;
+        }
+    }
+
+    /** Main Content */
+    .main {
+        @include container;
+
+        // Full-view mode.
+        @include at-breakpoint($breakpoint) {
+            @include span-columns(8 omega, 12);
+        }
+    }
+}
+
