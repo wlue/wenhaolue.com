@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 
+gem "rake"
 gem "jekyll"
-gem "jekyll-assets"
-
 gem "sass"
 gem "compass"
-gem "uglifier"

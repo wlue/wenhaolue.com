@@ -8,8 +8,10 @@ google_analytics:
 disqus:
   id: wlue
 
-# plugin
 assets:
-  compress:
-    js: uglifier
-    css: sass
+  sources:
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _vendors/bootstrap/stylesheets
+    - _vendors/bootstrap/javascripts
