@@ -1,17 +1,10 @@
 name: Wen-Hao Lue
 pygments: true
 relative_permalinks: false
-exclude: ['README.md', 'Gemfile', 'Gemfile.lock']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'config.rb', 'Rakefile',
+  'Procfile.local']
 
 google_analytics:
   account: UA-12654814-1
 disqus:
   id: wlue
-
-assets:
-  sources:
-    - _assets/images
-    - _assets/javascripts
-    - _assets/stylesheets
-    - _vendors/bootstrap/stylesheets
-    - _vendors/bootstrap/javascripts

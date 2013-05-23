@@ -1,0 +1,2 @@
+compass:    compass watch -c config.rb --force
+jekyll:     jekyll serve --watch
