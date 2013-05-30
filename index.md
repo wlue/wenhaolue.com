@@ -1,6 +1,6 @@
 ---
 layout: default
-root_url: /about
+title: Home
 ---
 
 ## Hi, I’m Wen-Hao Lue.
@@ -30,3 +30,14 @@ Twitter.
   [email]:                    mailto:contact@wenhaolue.com
   [@wlue]:                    http://twitter.com/wlue
 
+<hr>
+
+## Posts
+<ul class="posts">
+  {% for post in site.posts %}
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    - <span>{{ post.date | date_to_string }}</span>
+  </li>
+  {% endfor %}
+</ul>
