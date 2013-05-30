@@ -10,10 +10,11 @@ $base-line-height   : 30px;
 // Susy grid settings.
 $total-columns      : 12;
 $column-width       : 60px;
-$gutter-width       : 20px;
-$grid-padding       : 0px;
-$container-style    : fluid;
+$gutter-width       : 10px;
+$grid-padding       : 10px;
+
 $breakpoint         : 800px;
+$media-layout       : 12 $breakpoint;
 
 
 @include establish-baseline;
@@ -23,6 +24,7 @@ body {
     min-height: 100%;
     background-color: #f2f2f2;
 }
+
 
 /** Typography */
 
@@ -34,43 +36,73 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-h1 {
-    @include adjust-font-size-to(42px);
-}
+h1 { @include adjust-font-size-to(42px); }
+h2 { @include adjust-font-size-to(30px); }
 
 /** Style */
 
-mixin dark-style {
+@mixin dark-style {
     background-color: #333333;
     color: #f2f2f2;
 }
 
+
 /** Containers */
 
 .page {
-    @include container;
-
-    min-height: 100%;
-
     /** Sidebar */
-    .aside {
+    .header {
+        @include container(fluid);
         @include dark-style;
+        .container {
+            @include container;
+            padding-top: 10px;
+            padding-bottom: 10px;
 
-        // Full-view mode.
-        @include at-breakpoint($breakpoint) {
-            @include span-columns(4, 12);
-            padding-top: 3em;
-            text-align: right;
+            height: 80px;
+            @include at-breakpoint($breakpoint) {
+                height: 120px;
+            }
+
+            .image-container {
+                height: 120px;
+                width: 120px;
+                margin-right: 20px;
+                float: left;
+                img {
+                    margin: 10px;
+                }
+            }
+
+            .info {
+                padding: 10px;
+                .description {
+                    font-style: italic;
+                    font-weight: 100;
+                }
+            }
         }
     }
 
     /** Main Content */
     .main {
-        @include container;
+        @include container(fluid);
+        box-shadow: inset 0px 1px 0px #fff;
+        .container {
+            @include container;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+}
 
-        // Full-view mode.
-        @include at-breakpoint($breakpoint) {
-            @include span-columns(8 omega, 12);
+
+/** Pages */
+
+// Posts
+.page .main .container {
+    ul.posts {
+        li {
         }
     }
 }

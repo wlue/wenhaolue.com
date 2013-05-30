@@ -1,4 +1,5 @@
 name: Wen-Hao Lue
+permalink: pretty
 pygments: true
 relative_permalinks: false
 exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'config.rb', 'Rakefile',
