@@ -23,21 +23,28 @@
           {{ content }}
         </div>
       </section>
+      <footer class="footer">
+        <hr>
+        <ul class="social">
+          <li class="twitter">
+            <a href="http://twitter.com/wlue">
+              <i class="icon-twitter-sign icon-2x"></i>
+            </a>
+          </li>
+          <li class="github">
+            <a href="http://github.com/wlue">
+              <i class="icon-github-sign icon-2x"></i>
+            </a>
+          </li>
+          <li class="linkedin">
+            <a href="http://ca.linkedin.com/pub/wen-hao-lue/21/13a/695">
+              <i class="icon-linkedin-sign icon-2x"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      </footer>
     </div>
-
-  {% if site.google_analytics %}
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', '{{ site.google_analytics.account }}']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-  {% endif %}
-
+    {% include analytics.html %}
   </body>
 </html>
