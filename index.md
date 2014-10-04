@@ -11,10 +11,10 @@ I’m a programmer, musician, and I dabble in design. I studied
 In my spare time, I work on [various projects] and contribute to open source on
 [Github]. I'm one of the main contributors of [PonyDebugger].
 
-Most recently, I interned at [Twitter], writing [monoids] for [Map-Reduce] jobs
+Most recently, I worked at [Twitter], writing [monoids] for [Map-Reduce] jobs
 in Scala, and writing CoffeeScript for [Answers] on the [Crashlytics] team. I
 previously worked at [Square] as an iOS Engineer, developing features for
-[Square Register]. I also worked at [Xtreme Labs] as a iOS engineer, now
+[Square Register]. I also worked at [Xtreme Labs] as an iOS Engineer, now
 acquired by [Pivotal Labs].
 
 ## Shall we talk?
