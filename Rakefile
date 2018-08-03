@@ -11,12 +11,8 @@ task :generate => :clean do
   system 'bundle exec jekyll build'
 end
 
-desc "Deploy to development."
-task :deploy_dev => :generate do
-  system 'rsync -rtzh --progress --delete _site/ nimbus:/var/www/dev.wenhaolue.com/public_html/'
-end
-
 desc "Deploy to production."
 task :deploy => :generate do
-  system 'rsync -rtzh --progress --delete _site/ nimbus:/var/www/wenhaolue.com/public_html/'
+  system 'aws s3 sync _site/ s3://wenhaolue.com'
+  system 'aws cloudfront create-invalidation --distribution-id EEL1QG1SHQTQC --paths "/*"'
 end

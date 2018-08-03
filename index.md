@@ -40,5 +40,5 @@ Twitter. Check out my [resume].
   [Xtreme Labs]:              http://pivotallabs.com
   [email]:                    mailto:{{ site.email }}
   [@wlue]:                    http://twitter.com/wlue
-  [resume]:                   /resume
+  [resume]:                   /assets/resume.pdf
 
