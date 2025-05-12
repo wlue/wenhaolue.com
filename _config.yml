@@ -3,8 +3,15 @@ email: wenhao@wenhaolue.com
 permalink: pretty
 pygments: true
 relative_permalinks: false
-exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'config.rb', 'Rakefile',
-  'Procfile.local']
+exclude:
+  [
+    "README.md",
+    "Gemfile",
+    "Gemfile.lock",
+    "config.rb",
+    "Rakefile",
+    "Procfile.local",
+  ]
 
 google_analytics:
   account: UA-12654814-1

@@ -4,168 +4,183 @@
 @import "vendor/_font-awesome";
 
 // Compass settings.
-$base-font-size     : 20px;
-$base-line-height   : 30px;
+$base-font-size: 20px;
+$base-line-height: 30px;
 
 // Susy grid settings.
-$total-columns      : 12;
-$column-width       : 60px;
-$gutter-width       : 20px;
-$grid-padding       : 20px;
+$total-columns: 12;
+$column-width: 60px;
+$gutter-width: 20px;
+$grid-padding: 20px;
 
-$breakpoint         : 600px;
-$media-layout       : 12 $breakpoint;
-
+$breakpoint: 600px;
+$media-layout: 12 $breakpoint;
 
 @include establish-baseline;
 
 @font-face {
-    font-family: 'Proxima Nova';
-    src: url("../font/ProximaNova-Regular.otf");
+  font-family: "Proxima Nova";
+  src: url("../font/ProximaNova-Regular.otf");
 }
 
 @font-face {
-    font-family: 'Proxima Nova';
-    font-weight: bold;
-    src: url("../font/ProximaNova-Bold.otf");
+  font-family: "Proxima Nova";
+  font-weight: bold;
+  src: url("../font/ProximaNova-Bold.otf");
 }
 
 body {
-    font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, sans-serif;
-    min-height: 100%;
-    color: #222222;
-    background-color: #f2f2f2;
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, sans-serif;
+  min-height: 100%;
+  color: #222222;
+  background-color: #f2f2f2;
 }
-
 
 /** Typography */
 
 p {
-    margin: 0px 0 1em 0;
+  margin: 0px 0 1em 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-    text-shadow: 0px 1px #fff;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  text-shadow: 0px 1px #fff;
 }
 
-h1 { @include adjust-font-size-to(42px); }
-h2 { @include adjust-font-size-to(30px); }
+h1 {
+  @include adjust-font-size-to(42px);
+}
+h2 {
+  @include adjust-font-size-to(30px);
+}
 
-a:link, a:visited, a:hover {
-    color: #872020;
+a:link,
+a:visited,
+a:hover {
+  color: #872020;
 }
 
 ul {
-    li {
-        padding: 10px 20px;
-    }
+  li {
+    padding: 10px 20px;
+  }
 }
 
 hr {
-    margin-bottom: 30px;
-    border: none;
-    border-top: 1px solid #f7f7f7;
-    border-bottom: 1px solid #ccc;
+  margin-bottom: 30px;
+  border: none;
+  border-top: 1px solid #f7f7f7;
+  border-bottom: 1px solid #ccc;
 }
-
 
 /** Style */
 
 @mixin dark-style {
-    background-color: #333333;
-    color: #f2f2f2;
+  background-color: #333333;
+  color: #f2f2f2;
 }
-
 
 /** Containers */
 
 .page {
-    /** Sidebar */
-    .header {
-        @include container(fluid);
-        @include dark-style;
-        .container {
-            @include container;
-            padding-top: 10px;
-            padding-bottom: 10px;
+  /** Sidebar */
+  .header {
+    @include container(fluid);
+    @include dark-style;
+    .container {
+      @include container;
+      padding-top: 10px;
+      padding-bottom: 10px;
 
-            font-size: 75%;
-            @include at-breakpoint($breakpoint) {
-                font-size: 100%;
-            }
+      font-size: 75%;
+      @include at-breakpoint($breakpoint) {
+        font-size: 100%;
+      }
 
-            h1 {
-                font-family: 'Sansita One', 'Helvetica Neue';
-                font-weight: normal;
-                text-shadow: 0px 2px 1px #000;
-            }
+      h1 {
+        font-family: "Sansita One", "Helvetica Neue";
+        font-weight: normal;
+        text-shadow: 0px 2px 1px #000;
+      }
 
-            .image-container {
-                height: 120px;
-                width: 120px;
-                margin-right: 20px;
-                float: left;
-                img {
-                    margin: 10px;
-                }
-            }
-
-            .info {
-                font-family: 'Helvetica Neue', Helvetica, san-serif;
-                text-shadow: 0px 1px #000;
-                padding: 10px;
-                line-height: 20px;
-                .description {
-                    font-size: 80%;
-                    font-style: italic;
-                    font-weight: 100;
-                }
-            }
+      .image-container {
+        height: 160px;
+        width: 160px;
+        margin-right: 40px;
+        float: left;
+        img {
+          margin: 10px;
+          width: 140px;
+          height: 140px;
+          border-radius: 50%;
+          object-fit: cover;
+          box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+          border: 3px solid white;
         }
-    }
+      }
 
-    /** Main Content */
-    .main {
-        @include container(fluid);
-        box-shadow: inset 0px 1px 0px #fff;
-        .container {
-            @include container;
-            padding-top: 20px;
-            padding-bottom: 20px;
+      .info {
+        font-family: "Helvetica Neue", Helvetica, san-serif;
+        text-shadow: 0px 1px #000;
+        padding: 30px;
+        line-height: 20px;
+        .description {
+          font-size: 80%;
+          font-style: italic;
+          font-weight: 100;
         }
+      }
     }
+  }
 
-    .footer {
-        @include container;
-        text-align: center;
+  /** Main Content */
+  .main {
+    @include container(fluid);
+    box-shadow: inset 0px 1px 0px #fff;
+    .container {
+      @include container;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
 
-        ul.social {
-            li {
-                display: inline;
-                padding: 0 10px 30px 10px;
-                a { transition: 0.1s; }
-                a:link, a:visited, a:hover {
-                    color: #bbbbbb;
-                    text-decoration: none;
-                    text-shadow: 0px 1px #fff;
-                }
-                a:hover {
-                    color: #333333;
-                }
-            }
+  .footer {
+    @include container;
+    text-align: center;
+
+    ul.social {
+      li {
+        display: inline;
+        padding: 0 10px 30px 10px;
+        a {
+          transition: 0.1s;
         }
+        a:link,
+        a:visited,
+        a:hover {
+          color: #bbbbbb;
+          text-decoration: none;
+          text-shadow: 0px 1px #fff;
+        }
+        a:hover {
+          color: #333333;
+        }
+      }
     }
+  }
 }
-
 
 /** Pages */
 
 // Posts
 .page .main .container {
-    ul.posts {
-        li {
-        }
+  ul.posts {
+    li {
     }
+  }
 }
-
