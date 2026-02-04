@@ -5,30 +5,31 @@ title: Home
 
 ## Hi, I'm Wen-Hao Lue.
 
-I'm a [software engineer], [jazz drummer/pianist], and [foodie] based in in San
+{:ext: target="_blank" rel="noopener"}
+
+I'm a [software engineer]{:ext}, [jazz drummer/pianist], and [foodie]{:ext} based in in San
 Francisco. I'm drawn to zero-to-one work where I get to shape both how something
 is built and how it feels to use.
 
 ## Currently
 
-I'm building [Refeed], an app that helps people rediscover and share
+I'm building [Refeed]{:ext}, an app that helps people rediscover and share
 their food experiences. It automatically groups your food photos by place and
-time, turning them into simple, [shareable guides].
+time, turning them into simple, [shareable guides]{:ext}.
 
 I occasionally write [original compositions] and post my performances on
-[YouTube].
+[YouTube]{:ext}.
 
 ## Previously
 
-- [Stripe] — built onboarding and authentication infrastructure for [Connect]
-- [Sesame] — co-founded an ed-tech startup (Imagine K12/YCombinator F15)
-- [Twitter] — shipped Twitter Headlines using [Summingbird], mentioned in [VLDB
-  paper]
-- [Square] — iOS engineer, open sourced [PonyDebugger]
+- [Stripe]{:ext} — built onboarding and authentication infrastructure for [Connect]{:ext}
+- [Sesame]{:ext} — co-founded an ed-tech startup (Imagine K12/YCombinator F15)
+- [Twitter]{:ext} — shipped Twitter Headlines using [Summingbird]{:ext}, mentioned in [VLDB paper]{:ext}
+- [Square]{:ext} — iOS engineer, open sourced [PonyDebugger]{:ext}
 
 ## Get in touch
 
-Reach me by [email], find me on [Twitter]/[Instagram], or check out my [resume].
+Reach me by [email], find me on [Twitter]{:ext}/[Instagram]{:ext}, or check out my [resume]{:ext}.
 
 [software engineer]: http://github.com/wlue
 [jazz drummer/pianist]: /music
