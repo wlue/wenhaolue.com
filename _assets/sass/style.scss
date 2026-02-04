@@ -42,6 +42,10 @@ p {
   margin: 0px 0 1em 0;
 }
 
+strong, b {
+  font-weight: bold;
+}
+
 h1,
 h2,
 h3,
@@ -57,6 +61,7 @@ h1 {
 }
 h2 {
   @include adjust-font-size-to(30px);
+  margin-top: 1em;
 }
 
 a:link,
@@ -66,8 +71,20 @@ a:hover {
 }
 
 ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 20px;
   li {
-    padding: 10px 20px;
+    padding: 0;
+  }
+}
+
+ol {
+  list-style-type: decimal;
+  margin-left: 20px;
+  padding-left: 20px;
+  li {
+    padding: 5px 0;
   }
 }
 

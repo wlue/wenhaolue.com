@@ -1,6 +1,10 @@
 name: Wen-Hao Lue
+description: "Engineer, jazz musician, foodie"
+url: https://wenhaolue.com
 email: wenhao@wenhaolue.com
 permalink: pretty
+plugins:
+  - jekyll-sitemap
 pygments: true
 relative_permalinks: false
 exclude:

@@ -3,57 +3,50 @@ layout: default
 title: Home
 ---
 
-## Hi, I’m Wen-Hao Lue.
+## Hi, I'm Wen-Hao Lue.
 
-I’m a Software Engineer based in San Francisco with a passion for engineering
-and design. I enjoy solving challenging, high-impact problems and building
-products that are delightful to use with solid technical foundations. I’m
-especially excited about zero-to-one work where I can take deep ownership and
-help shape both technical architecture and product experiences.
+I'm a [software engineer], [jazz drummer/pianist], and [foodie] based in in San
+Francisco. I'm drawn to zero-to-one work where I get to shape both how something
+is built and how it feels to use.
 
-Most recently, I worked at [Stripe] for four years as a Software Engineer,
-responsible for many projects on the [Connect] team. Before that, I co-founded
-[Sesame], an ed-tech start-up, and we went through [Imagine-K12] during the Fall
-2015 cohort.
+## Currently
 
-Previously, I worked at [Twitter], writing [monoids] for [Map-Reduce] jobs
-in Scala, and writing CoffeeScript for [Answers] on the [Crashlytics] team. I
-previously worked at [Square] as an iOS Engineer, developing features for
-[Square Register].
+I'm building [Refeed], an app that helps people rediscover and share
+their food experiences. It automatically groups your food photos by place and
+time, turning them into simple, [shareable guides].
 
-In the past, I worked on [various projects] and contributed to open source
-projects on [GitHub], such as [PonyDebugger].
+I occasionally write [original compositions] and post my performances on
+[YouTube].
 
-## Shall we talk?
+## Previously
 
-The best way to contact me is through [email]. You can also ping me [@wlue] on
-Twitter. Check out my [resume].
+- [Stripe] — built onboarding and authentication infrastructure for [Connect]
+- [Sesame] — co-founded an ed-tech startup (Imagine K12/YCombinator F15)
+- [Twitter] — shipped Twitter Headlines using [Summingbird], mentioned in [VLDB
+  paper]
+- [Square] — iOS engineer, open sourced [PonyDebugger]
 
-## Music
+## Get in touch
 
-Interested in listening to my music? Check out my [original compositions] and
-[YouTube] channel.
+Reach me by [email], find me on [Twitter]/[Instagram], or check out my [resume].
 
-[Software Engineering]: https://uwaterloo.ca/software-engineering/
-[University of Waterloo]: http://uwaterloo.ca
+[software engineer]: http://github.com/wlue
+[jazz drummer/pianist]: /music
+[foodie]: https://refeed.co/@wlue
+[Refeed]: https://www.refeed.co
+[shareable guides]: https://www.refeed.co/@wlue/lists/japan-2025
+[original compositions]: /music
+[YouTube]: https://www.youtube.com/@wlue
 [Stripe]: https://stripe.com
 [Connect]: https://stripe.com/connect
 [Sesame]: https://www.ycombinator.com/companies/sesame
-[Imagine-K12]: http://www.imaginek12.com
-[various projects]: /projects
-[GitHub]: http://github.com/wlue
-[PonyDebugger]: http://github.com/square/ponydebugger
-[monoids]: http://github.com/twitter/algebird
-[Map-Reduce]: http://github.com/twitter/scalding
 [Twitter]: http://twitter.com
-[Answers]: https://answers.io
-[Crashlytics]: http://crashlytics.com
+[Summingbird]: http://github.com/twitter/summingbird
+[VLDB paper]: http://www.vldb.org/pvldb/vol7/p1441-boykin.pdf
 [Square]: http://squareup.com
-[Square Register]: http://squareup.com/register
+[PonyDebugger]: http://github.com/square/ponydebugger
 
 [email]: mailto:{{ site.email }}
-[@wlue]: http://twitter.com/wlue
+[Twitter]: http://twitter.com/wlue
+[Instagram]: https://www.instagram.com/whlue/
 [resume]: /assets/resume.pdf
-
-[original compositions]: /music
-[YouTube]: https://www.youtube.com/@wlue
