@@ -7,7 +7,7 @@ title: Home
 
 {:ext: target="_blank" rel="noopener"}
 
-I'm a [software engineer]{:ext}, [jazz drummer/pianist], and [foodie]{:ext} based in in San
+I'm a [software engineer]{:ext}, [jazz drummer/pianist], and [foodie]{:ext} based in San
 Francisco. I'm drawn to zero-to-one work where I get to shape both how something
 is built and how it feels to use.
 

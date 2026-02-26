@@ -19,18 +19,25 @@ $media-layout: 12 $breakpoint;
 @include establish-baseline;
 
 @font-face {
-  font-family: "Proxima Nova";
-  src: url("../font/ProximaNova-Regular.otf");
+  font-family: "Metropolis";
+  src: url("../font/metropolis/Metropolis-Regular.otf");
 }
 
 @font-face {
-  font-family: "Proxima Nova";
+  font-family: "Metropolis";
   font-weight: bold;
-  src: url("../font/ProximaNova-Bold.otf");
+  src: url("../font/metropolis/Metropolis-Bold.otf");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: 100;
+  font-style: italic;
+  src: url("../font/metropolis/Metropolis-ThinItalic.otf");
 }
 
 body {
-  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Metropolis", "Helvetica Neue", Helvetica, sans-serif;
   min-height: 100%;
   color: #222222;
   background-color: #f2f2f2;
