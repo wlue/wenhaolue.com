@@ -43,6 +43,13 @@ const metropolis = localFont({
   display: "swap",
 });
 
+const sansitaOne = localFont({
+  src: "../../public/fonts/SansitaOne-Regular.ttf",
+  weight: "400",
+  variable: "--font-sansita",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -75,7 +82,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${metropolis.variable} font-sans antialiased bg-bg text-text`}
+        className={`${metropolis.variable} ${sansitaOne.variable} font-sans antialiased bg-bg text-text`}
       >
         <div className="min-h-screen flex flex-col">
           <Header />

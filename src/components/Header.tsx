@@ -20,7 +20,7 @@ export function Header() {
           </Link>
           <div>
             <Link href="/" className="no-underline hover:no-underline">
-              <h1 className="text-2xl font-bold text-text-header">
+              <h1 className="text-2xl font-normal text-text-header" style={{ fontFamily: "var(--font-sansita)", textShadow: "0px 2px 1px #000" }}>
                 Wen-Hao Lue
               </h1>
             </Link>

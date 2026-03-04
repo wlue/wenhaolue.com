@@ -97,7 +97,7 @@ export default function Home() {
 
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4 text-text">Previously</h2>
-        <ul className="list-disc list-outside pl-5 space-y-2 text-lg text-text-secondary">
+        <ul className="space-y-2 text-lg text-text-secondary">
           {experience.map((item) => (
             <li key={item.company}>
               <ExtLink href={item.url}>{item.company}</ExtLink> &mdash;{" "}
