@@ -1,16 +1,16 @@
 {
-  "name": "next-scaffold",
-  "version": "0.1.0",
+  "name": "wenhaolue.com",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "pnpm build && aws s3 sync out/ s3://wenhaolue.com && aws cloudfront create-invalidation --distribution-id EEL1QG1SHQTQC --paths '/*'"
   },
   "dependencies": {
     "@next/third-parties": "^16.1.6",
-    "framer-motion": "^12.34.5",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.576.0",
     "next": "16.1.6",

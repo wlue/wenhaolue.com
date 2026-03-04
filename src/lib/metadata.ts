@@ -10,5 +10,5 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/whlue/",
     youtube: "https://www.youtube.com/@wlue",
   },
-  ga4Id: "G-XXXXXXXXXX", // Replace with actual GA4 ID
+  ga4Id: "G-QY9652EQQN",
 };

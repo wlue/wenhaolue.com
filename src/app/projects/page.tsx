@@ -1,8 +1,3 @@
-"use client";
-
-import { AnimateOnScroll } from "@/components/AnimateOnScroll";
-import { PageTransition } from "@/components/PageTransition";
-
 const projects = [
   {
     name: "Refeed",
@@ -80,32 +75,22 @@ function ProjectCard({
 
 export default function ProjectsPage() {
   return (
-    <PageTransition>
-      <div className="max-w-3xl mx-auto px-6 py-12">
-        <AnimateOnScroll>
-          <h2 className="text-3xl font-bold mb-8 text-text">Projects</h2>
-        </AnimateOnScroll>
+    <div className="max-w-3xl mx-auto px-6 py-12">
+      <h2 className="text-3xl font-bold mb-8 text-text">Projects</h2>
 
-        <div className="space-y-4 mb-12">
-          {projects.map((project, i) => (
-            <AnimateOnScroll key={project.name} delay={0.05 + i * 0.05}>
-              <ProjectCard {...project} />
-            </AnimateOnScroll>
-          ))}
-        </div>
-
-        <AnimateOnScroll delay={0.3}>
-          <h2 className="text-2xl font-bold mb-6 text-text">Open Source</h2>
-        </AnimateOnScroll>
-
-        <div className="space-y-4">
-          {openSource.map((project, i) => (
-            <AnimateOnScroll key={project.name} delay={0.35 + i * 0.05}>
-              <ProjectCard {...project} year="" />
-            </AnimateOnScroll>
-          ))}
-        </div>
+      <div className="space-y-4 mb-12">
+        {projects.map((project) => (
+          <ProjectCard key={project.name} {...project} />
+        ))}
       </div>
-    </PageTransition>
+
+      <h2 className="text-2xl font-bold mb-6 text-text">Open Source</h2>
+
+      <div className="space-y-4">
+        {openSource.map((project) => (
+          <ProjectCard key={project.name} {...project} year="" />
+        ))}
+      </div>
+    </div>
   );
 }
