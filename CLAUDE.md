@@ -4,48 +4,75 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal website for Wen-Hao Lue, built with Jekyll (static site generator) and Compass/SASS for styling. Deployed to AWS S3 with CloudFront CDN.
+Personal website for Wen-Hao Lue, built with Next.js 15 (App Router), TypeScript, and Tailwind CSS v4. Deployed to Vercel.
 
 ## Commands
 
 ### Local Development
 ```bash
-bundle install              # Install dependencies
-foreman start -f Procfile.local  # Run local dev server (Compass watch + Jekyll serve)
+pnpm install    # Install dependencies
+pnpm dev        # Run local dev server (localhost:3000)
 ```
 
 ### Build and Deploy
 ```bash
-rake generate   # Clean, compile SASS, build Jekyll site
-rake deploy     # Generate and deploy to S3 + invalidate CloudFront
-rake clean      # Remove _site/ directory
+pnpm build      # Build production site
+pnpm start      # Serve production build locally
 ```
+
+Deployed automatically via Vercel on push to `master`.
 
 ## Architecture
 
-- **Jekyll** generates static HTML from Markdown/HTML templates
-- **Compass/SASS** compiles `_assets/sass/style.scss` to `assets/css/style.css`
-- **Susy** provides the 12-column grid system
-- **jekyll-sitemap** auto-generates `sitemap.xml` at build time
-- Ruby 3.2.0 (see `.ruby-version`)
+- **Next.js 15** with App Router for routing and static generation
+- **Tailwind CSS v4** for styling with custom `@theme` tokens in `globals.css`
+- **Framer Motion** for page transitions and scroll-reveal animations
+- **MDX** (via `next-mdx-remote`) for blog posts
+- **Lucide React** for icons
+- **next/font/local** loads self-hosted Metropolis font
+- **@next/third-parties** for Google Analytics 4
 
 ### Key Directories
 
-- `_layouts/` - Jekyll layout templates (default.html is the main template)
-- `_includes/` - Reusable partials (header.html, analytics.html)
-- `_assets/sass/` - SASS source files
-- `assets/` - Compiled CSS, JS, images, fonts
-- `_site/` - Generated output (git-ignored)
+- `src/app/` — Pages and layouts (App Router)
+- `src/components/` — Shared React components
+- `src/lib/` — Utilities (post parsing, metadata constants)
+- `src/content/posts/` — MDX blog posts with frontmatter
+- `public/` — Static assets (fonts, images, resume, favicon)
 
 ### Content Pages
 
-- `index.md` - Home page
-- `music.html` - Music/compositions
-- `projects.html` - Projects listing (excluded from sitemap)
-- `posts.html` - Blog listing (excluded from sitemap, currently unused)
+- `/` — Home (hero, currently, previously, contact)
+- `/music` — Music/compositions with lazy-loaded YouTube embeds
+- `/projects` — Project cards with animations
+- `/blog` — Blog listing + individual MDX posts (`/blog/[slug]`)
+- `/sitemap.xml` — Auto-generated sitemap
+- `/robots.txt` — Auto-generated robots.txt
+
+### Dark Mode
+
+- Class-based (`dark` class on `<html>`) with `ThemeProvider` context
+- System preference detection + localStorage persistence
+- Inline `<script>` in layout prevents FOUC
+- All colors use Tailwind `dark:` variants
+
+### Adding Blog Posts
+
+Create a new `.mdx` file in `src/content/posts/` with frontmatter:
+```mdx
+---
+title: "Post Title"
+date: "2026-01-01"
+description: "Brief description"
+tags: ["tag1", "tag2"]
+---
+
+Post content in MDX...
+```
 
 ### SEO
 
-- `_config.yml` sets the site `url` and `description` used for meta tags and sitemap
-- `_layouts/default.html` renders `<title>` and `<meta name="description">` (supports per-page `description` front matter)
-- Pages can set `sitemap: false` in front matter to be excluded from sitemap.xml
+- Root layout sets default metadata with title template
+- Per-page `metadata` exports for title/description
+- Dynamic `sitemap.ts` includes all pages and blog posts
+- `robots.ts` allows all crawlers
