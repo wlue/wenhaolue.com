@@ -3,6 +3,7 @@ GEM
   specs:
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
+    bigdecimal (3.1.9)
     chunky_png (1.4.0)
     colorator (1.1.0)
     compass (1.0.3)
@@ -25,17 +26,23 @@ GEM
     ffi (1.16.3)
     foreman (0.87.2)
     forwardable-extended (2.6.0)
-    google-protobuf (4.26.0)
+    google-protobuf (4.27.5)
+      bigdecimal
       rake (>= 13)
-    google-protobuf (4.26.0-aarch64-linux)
+    google-protobuf (4.27.5-aarch64-linux)
+      bigdecimal
       rake (>= 13)
-    google-protobuf (4.26.0-arm64-darwin)
+    google-protobuf (4.27.5-arm64-darwin)
+      bigdecimal
       rake (>= 13)
-    google-protobuf (4.26.0-x86-linux)
+    google-protobuf (4.27.5-x86-linux)
+      bigdecimal
       rake (>= 13)
-    google-protobuf (4.26.0-x86_64-darwin)
+    google-protobuf (4.27.5-x86_64-darwin)
+      bigdecimal
       rake (>= 13)
-    google-protobuf (4.26.0-x86_64-linux)
+    google-protobuf (4.27.5-x86_64-linux)
+      bigdecimal
       rake (>= 13)
     http_parser.rb (0.8.0)
     i18n (1.14.4)
